@@ -1,0 +1,38 @@
+Task: Contribute a Patch on GitHub
+
+1. Create a GitHub account if you don’t have one already at https://github.com/
+
+2. Fork the repository at https://github.com/kw108/max (just press the fork button)
+
+3. Clone your forked repository:
+https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository
+4. Choose one of the files (C, Java, or Python) and fix the code as instructed in the comments
+
+5. Create a commit with your changes: https://github.com/git-guides/git-commit
+
+6. Send the commit upstream via git push
+
+7. Goto your repository webpage and create a Pull Request:
+https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork
+
+==
+
+Solution:
+
+The correct solution is to include the first element in the iteration.
+
+So for max.c and Max.java:
+- for (int i=n-2; i>0; i--)
++for (int i=n-2; i>=0; i--)
+
+For max.py:
+- for i in range(n-2, 0, -1):
++ for i in range(n-2, -1, -1):
+
+The test cases added should be an array for which the maximum element is in the first position.
+
+
+Marking scheme:
+- 6 points to everyone who successfully opened a PR
+- 2 points for the correct fix
+- 2 points for a correct test: 1 point for a correct array, and 1 point for adding the correct assert

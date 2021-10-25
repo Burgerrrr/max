@@ -11,7 +11,7 @@
 int max(int n, int *a) {
   assert(n > 0);
   int max = a[n-1];
-  for (int i=n-2; i>0; i--)
+  for (int i=n-2; i>=0; i--)           //bug is here
     if (a[i] > max)
       max = a[i];
 
@@ -29,4 +29,9 @@ int main(int argc, char** argv) {
   int max_b = max(7, b);
   printf("max(7, b) = %d\n", max_b);
   assert(max_b == 9);
+  
+  int c[] = {3, 1, 6, 4, 8};
+  int max_c = max(5, c);
+  printf("max(5, c) = %d\n", max_c);
+  assert(max_c == 8);
 }
